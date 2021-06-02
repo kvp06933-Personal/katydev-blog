@@ -1,44 +1,36 @@
-<<<<<<< HEAD
+import React, { Component } from "react";
+import "./App.css";
+import BlogComponent from "./components/BlogComponent";
 
-import React, {Component} from 'react';
-import './App.css';
-import BlogComponent from './components/BlogComponent';
-import DirectoryComponent from './components/DirectoryComponent';
-import {POSTS} from './shared/posts';
-
+import Navigation from "./components/NavigationComponent";
+import { POSTS } from "./databases/posts";
+import About from "./components/AbountComponent";
+import Contact from "./components/ContactComponent";
+import Login from "./components/LoginComponent";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state= {
-      posts: POSTS
-=======
-import React, {Component} from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Navigation from './components/navigation';
-import {POSTS} from './databases/posts';
-class App extends Component {
-  constructor(props){
-    super(props);
-    this.state={
-      posts: {POSTS}
->>>>>>> a96c6ef2550f3e6069aee9673c729e68e043f1f9
-    }
+    this.state = {
+      posts: POSTS,
+      name: "Katy"
+    };
   }
-  render(){
-  return (
-    <div className="App">
-<<<<<<< HEAD
-      <div className="test">
-          <BlogComponent/>
-          <DirectoryComponent posts={this.state.posts}/>
+  render() {
+    return (
+      <div className="App">
+        <Router>
+          <Navigation />
+          {/* <DirectoryComponent posts={this.state.posts}/> */}
+          <Route exact path="/" render={(props)=>(<BlogComponent{...props} posts = {this.state.posts}/>)}></Route>
+          <Route path="/about" component={About}></Route>
+          <Route exact path="/contact" component={Contact}></Route>
+          <Route exact path="/Login" component={Login}></Route>
+        </Router>
       </div>
-=======
-      <Navigation/>
->>>>>>> a96c6ef2550f3e6069aee9673c729e68e043f1f9
-    </div>
-  );
-}
+    );
+  }
 }
 
 export default App;

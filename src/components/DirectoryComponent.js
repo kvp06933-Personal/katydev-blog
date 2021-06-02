@@ -4,7 +4,7 @@ import {Card, Button} from 'react-bootstrap';
 class DirectoryComponent extends Component {
     constructor(props){
         super(props);
-        this.state = {};
+        
     }
     
     render() {
@@ -13,9 +13,9 @@ class DirectoryComponent extends Component {
             <Card key={post.id} style={{ width: '15rem' }}>
                 <Card.Img variant="top" src="/assets/images/mountain-1.jpg" />
                 <Card.Body>
-                    <Card.Title>{post.name}</Card.Title>
+                    <Card.Title>{post.title}</Card.Title>
                     <Card.Text>
-                    {post.description}
+                    {post.content}
                     </Card.Text>
                     <Button variant="primary">Go somewhere</Button>
                 </Card.Body>

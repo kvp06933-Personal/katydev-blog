@@ -1,18 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-<<<<<<< HEAD
+import {BrowserRouter} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import './index.css';
-=======
->>>>>>> a96c6ef2550f3e6069aee9673c729e68e043f1f9
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <App />
-  </React.StrictMode>,
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
