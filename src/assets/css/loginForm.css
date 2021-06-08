@@ -1,0 +1,39 @@
+
+body{
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    background: rgb(255,246,183);
+    background: linear-gradient(135deg, rgba(255,246,183,1) 10%, rgba(246,65,108,1) 100%);
+}
+.loginContainer{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.loginForm{
+    color: #fff;
+    background-color: #2d2d2d;
+    background-color: #eeaba2;
+    background: #fecacc;
+    padding: 2rem;
+    
+    
+}
+.loginForm h1 {
+    margin-bottom: 2rem;
+}
+
+.form-row{
+    margin-bottom: 2rem;
+}
+/* .btn{
+    background: #edf8fc;
+    background: #dbf4f1;
+} */
+
+

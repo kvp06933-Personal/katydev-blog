@@ -1,8 +1,8 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Link} from 'react-router-dom';
 import {LinkContainer} from 'react-router-bootstrap';
 import {Navbar, Nav, Container, Button} from 'react-bootstrap';
-import About from './AbountComponent';
+
 
 function Navigation () {
     return (
@@ -11,16 +11,16 @@ function Navigation () {
             
               <Navbar.Brand href="#home">KatyDev</Navbar.Brand>
               <Nav className="ml-auto">
-                <LinkContainer to="/">
-                <Nav.Link as={Link} href="#home">Home</Nav.Link>
+                <LinkContainer to={{pathname: "/"}}>
+                <Nav.Link as={Link}  href="#home">Home</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/about">
+                <LinkContainer to={{pathname: "/about"}}>
                 <Nav.Link as={Link} href="#home">About</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/contact">
+                <LinkContainer to={{pathname: "/contact"}}>
                 <Nav.Link as={Link} href="#home">Contact</Nav.Link>
                 </LinkContainer>
-                <LinkContainer to="/login">
+                <LinkContainer to={{pathname: "/login"}}>
                 <Nav.Link as={Link} href="#home"><Button>Login</Button></Nav.Link>
                 </LinkContainer>
                
